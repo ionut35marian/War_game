@@ -12,3 +12,13 @@ class Card:
         self.value=values[rank]
     def __str__(self):
         return self.rank + " of " + self.suit
+
+class Deck:
+    
+    def __init__(self):
+        self.all_cards = []
+        
+        for suit in suits:
+            for rank in ranks:
+                created_card=Card(suit,rank) 
+                self.all_cards.append(created_card)
